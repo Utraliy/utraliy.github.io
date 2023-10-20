@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>客户端下载</title>
+    <meta name="keywords" content="非官方版本红警2平台">
+    <meta name="description" content="非官方版本红警2平台">
+    <meta name="author" content="order by www.pb2345.com PB1775" />
+    <link rel="shortcut icon" type="image/-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <style>
+        .deng-box1 {
+            position: fixed;
+            top: -30px;
+            left: -1px;
+            z-index: 9999;
+            pointer-events: none;
+        }
+        
+        .deng-box2 {
+            position: fixed;
+            top: -25px;
+            left: 184px;
+            z-index: 9999;
+            pointer-events: none;
+        }
+        
+        .deng-box3 {
+            position: fixed;
+            top: -28px;
+            right: 11px;
+            z-index: 9999;
+            pointer-events: none;
+        }
+        
+        .deng-box4 {
+            position: fixed;
+            top: -26px;
+            right: 183px;
+            z-index: 9999;
+            pointer-events: none;
+        }
+        
+        .deng-box1 .deng {
+            position: relative;
+            width: 120px;
+            height: 90px;
+            margin: 50px;
+            background: #d8000f;
+            background: rgba(216, 0, 15, 0.8);
+            border-radius: 50% 50%;
+            -webkit-transform-origin: 50% -100px;
+            -webkit-animation: swing 3s infinite ease-in-out;
+            box-shadow: -5px 5px 50px 4px rgba(250, 108, 0, 1);
+        }
+        
+        .deng-box2 .deng {
+            position: relative;
+            width: 120px;
+            height: 90px;
+            margin: 50px;
+            background: #d8000f;
+            background: rgba(216, 0, 15, 0.8);
+            border-radius: 50% 50%;
+            -webkit-transform-origin: 50% -100px;
+            -webkit-animation: swing 4s infinite ease-in-out;
+            box-shadow: -5px 5px 30px 4px rgba(252, 144, 61, 1);
+        }
+        
+        .deng-box3 .deng {
+            position: relative;
+            width: 120px;
+            height: 90px;
+            margin: 50px;
+            background: #d8000f;
+            background: rgba(216, 0, 15, 0.8);
+            border-radius: 50% 50%;
+            -webkit-transform-origin: 50% -100px;
+            -webkit-animation: swing 5s infinite ease-in-out;
+            box-shadow: -5px 5px 50px 4px rgba(250, 108, 0, 1);
+        }
+        
+        .deng-box4 .deng {
+            position: relative;
+            width: 120px;
+            height: 90px;
+            margin: 50px;
+            background: #d8000f;
+            background: rgba(216, 0, 15, 0.8);
+            border-radius: 50% 50%;
+            -webkit-transform-origin: 50% -100px;
+            -webkit-animation: swing 4s infinite ease-in-out;
+            box-shadow: -5px 5px 30px 4px rgba(252, 144, 61, 1);
+        }
+        
+        .deng-a {
+            width: 100px;
+            height: 90px;
+            background: #d8000f;
+            background: rgba(216, 0, 15, 0.1);
+            margin: 12px 8px 8px 10px;
+            border-radius: 50% 50%;
+            border: 2px solid #dc8f03;
+        }
+        
+        .deng-b {
+            width: 45px;
+            height: 90px;
+            background: #d8000f;
+            background: rgba(216, 0, 15, 0.1);
+            margin: -2px 8px 8px 26px;
+            border-radius: 50% 50%;
+            border: 2px solid #dc8f03;
+        }
+        
+        .xian {
+            position: absolute;
+            top: -50px;
+            left: 60px;
+            width: 2px;
+            height: 50px;
+            background: #dc8f03;
+        }
+        
+        .shui-a {
+            position: relative;
+            width: 5px;
+            height: 20px;
+            margin: -5px 0 0 59px;
+            -webkit-animation: swing 4s infinite ease-in-out;
+            -webkit-transform-origin: 50% -45px;
+            background: #ffa500;
+            border-radius: 0 0 5px 5px;
+        }
+        
+        .shui-b {
+            position: absolute;
+            top: 14px;
+            left: -2px;
+            width: 10px;
+            height: 10px;
+            background: #dc8f03;
+            border-radius: 50%;
+        }
+        
+        .shui-c {
+            position: absolute;
+            top: 18px;
+            left: -2px;
+            width: 10px;
+            height: 35px;
+            background: #ffa500;
+            border-radius: 0 0 0 5px;
+        }
+        
+        .deng:before {
+            position: absolute;
+            top: -7px;
+            left: 29px;
+            height: 12px;
+            width: 60px;
+            content: " ";
+            display: block;
+            z-index: 999;
+            border-radius: 5px 5px 0 0;
+            border: solid 1px #dc8f03;
+            background: #ffa500;
+            background: linear-gradient(to right, #dc8f03, #ffa500, #dc8f03, #ffa500, #dc8f03);
+        }
+        
+        .deng:after {
+            position: absolute;
+            bottom: -7px;
+            left: 10px;
+            height: 12px;
+            width: 60px;
+            content: " ";
+            display: block;
+            margin-left: 20px;
+            border-radius: 0 0 5px 5px;
+            border: solid 1px #dc8f03;
+            background: #ffa500;
+            background: linear-gradient(to right, #dc8f03, #ffa500, #dc8f03, #ffa500, #dc8f03);
+        }
+        
+        .deng-t {
+            font-family: 微软雅黑, Arial, Lucida Grande, Tahoma, sans-serif;
+            font-size: 3.2rem;
+            color: #dc8f03;
+            font-weight: bold;
+            line-height: 85px;
+            text-align: center;
+        }
+        
+        .night .deng-t,
+        .night .deng-box,
+        .night .deng-box1 {
+            background: transparent !important;
+        }
+        
+        @-moz-keyframes swing {
+            0% {
+                -moz-transform: rotate(-10deg)
+            }
+            50% {
+                -moz-transform: rotate(10deg)
+            }
+            100% {
+                -moz-transform: rotate(-10deg)
+            }
+        }
+        
+        @-webkit-keyframes swing {
+            0% {
+                -webkit-transform: rotate(-10deg)
+            }
+            50% {
+                -webkit-transform: rotate(10deg)
+            }
+            100% {
+                -webkit-transform: rotate(-10deg)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="deng-box1">
+
+        <div class="deng">
+
+            <div class="xian"></div>
+
+            <div class="deng-a">
+
+                <div class="deng-b">
+                    <div class="deng-t">国</div>
+                </div>
+
+            </div>
+
+            <div class="shui shui-a">
+                <div class="shui-c"></div>
+                <div class="shui-b"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="deng-box2">
+
+        <div class="deng">
+
+            <div class="xian"></div>
+
+            <div class="deng-a">
+
+                <div class="deng-b">
+                    <div class="deng-t">庆</div>
+                </div>
+
+            </div>
+
+            <div class="shui shui-a">
+                <div class="shui-c"></div>
+                <div class="shui-b"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="deng-box3">
+
+        <div class="deng">
+
+            <div class="xian"></div>
+
+            <div class="deng-a">
+
+                <div class="deng-b">
+                    <div class="deng-t">乐</div>
+                </div>
+
+            </div>
+
+            <div class="shui shui-a">
+                <div class="shui-c"></div>
+                <div class="shui-b"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="deng-box4">
+
+        <div class="deng">
+
+            <div class="xian"></div>
+
+            <div class="deng-a">
+
+                <div class="deng-b">
+                    <div class="deng-t">快</div>
+                </div>
+
+            </div>
+
+            <div class="shui shui-a">
+                <div class="shui-c"></div>
+                <div class="shui-b"></div>
+            </div>
+        </div>
+
+    </div> -->
+    <header class="header">
+        <!-- Start Header Navbar-->
+        <div class="main-header">
+            <div class="main-menu-wrap">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-6">
+                            <!-- Logo -->
+                            <div class="logo">
+                                <a href=""> <img src="picture/logo3.png" data-rjs="2" alt="logo"> </a>
+                            </div>
+                            <!-- End of Logo -->
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-4 col-6 menu-button">
+                            <div class="menu--inner-area clearfix">
+                                <div class="menu-wraper">
+                                    <nav>
+                                        <!-- Header-menu -->
+                                        <div class="header-menu dosis">
+                                            <ul>
+                                                <li><a href="/index.html">首页</a></li>
+                                                <li class='active'><a href="/download.html">客户端下载</a></li>
+                                                <li><a href="/about.html">关于我们</a></li>
+                                                <li><a href="/studio.html">赞助我们</a></li>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Header Navbar-->
+    </header>
+    <!-- End of Main header -->
+
+    <!-- interact user -->
+    <section class="pt-120 pb-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-5">
+                    <!-- user ineract text -->
+                    <div class="user-interact-inner">
+                        <h2>重聚2023 - 正式版</h2>
+                        <p>稳定版本，推荐使用</p>
+                        <a href="https://dev.raa2022.top/?p=1" class="btn" target="_blank">客户端下载</a> | <a href="https://dev.raa2022.top/?p=28" class="btn" target="_blank">更新日志</a> </div>
+                    <!--End of user ineract text -->
+                </div>
+                <div class="col-lg-7 col-sm-7">
+                    <!-- user interact image -->
+                    <div class="user-interact-image type2"> <img src="picture/index4.png" alt="index2"> </div>
+                    <!-- End of user interact image -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- interact user -->
+
+    <!-- interact user -->
+    <section class="pt-120 pb-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-5">
+                    <!-- user ineract text -->
+                    <div class="user-interact-inner">
+                        <h2>重聚2023 - Beta版</h2>
+                        <p>较稳定版本，但仍可能带有少量Bug</p>
+                        <a href="https://dev.raa2022.top/?p=1" class="btn" target="_blank">客户端下载</a> | <a href="https://dev.raa2022.top/?p=28" class="btn" target="_blank">更新日志</a> </div>
+                    <!--End of user ineract text -->
+                </div>
+                <div class="col-lg-7 col-sm-7">
+                    <!-- user interact image -->
+                    <div class="user-interact-image type2"> <img src="picture/index6.png" alt="index2"> </div>
+                    <!-- End of user interact image -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- interact user -->
+
+    <!-- interact user -->
+    <section class="pt-120 pb-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-5">
+                    <!-- user ineract text -->
+                    <div class="user-interact-inner">
+                        <h2>重聚2023 - CI版</h2>
+                        <p>内部版本，Bug可能较多</p>
+                        <a href="/about.html" class="btn" target="_blank">加入内测QQ群</a> | <a href="https://dev.raa2022.top/?p=32" class="btn" target="_blank">更新日志</a> </div>
+                    <!--End of user ineract text -->
+                </div>
+                <div class="col-lg-7 col-sm-7">
+                    <!-- user interact image -->
+                    <div class="user-interact-image type2"> <img src="picture/index7.png" alt="index2"> </div>
+                    <!-- End of user interact image -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- interact user -->
+
+    <!-- interact user -->
+    <section class="pt-120 pb-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-5">
+                    <!-- user ineract text -->
+                    <div class="user-interact-inner">
+                        <h2>重聚2023 - 客户端组件</h2>
+                        <p>Net7运行库</p>
+                        <a href="/plugin.html" class="btn" target="_blank">组件下载</a> </div>
+                    <!--End of user ineract text -->
+                </div>
+                <div class="col-lg-7 col-sm-7">
+                    <!-- user interact image -->
+                    <div class="user-interact-image type2"> <img src="picture/index8.png" alt="index2"> </div>
+                    <!-- End of user interact image -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- interact user -->
+
+
+    <!-- app pricing plan -->
+
+
+    <!-- start blog area -->
+
+    <!-- download app -->
+    <section class="border-top pt-110 pb-150">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-md-12">
+                    <div class="download-app-inner text-center">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of download app -->
+
+
+    <h6 align="center">
+
+        <div>
+            <h6>最终解释权归君悦OwO所有，Copyright © 2023 月弧制作组，All Rights Reserved！<br/><br/> 本站由 <a href="https://pages.github.com" target="_blank">【Github Pages】</a> 提供云计算服务<br/><br/>
+                <span id="span"></span>
+                <script type="text/javascript">
+                    function runtime() {
+                        // 初始时间，日/月/年 时:分:秒
+                        X = new Date("07/01/2023 8:00:00");
+                        Y = new Date();
+                        T = (Y.getTime() - X.getTime());
+                        M = 24 * 60 * 60 * 1000;
+                        a = T / M;
+                        A = Math.floor(a);
+                        b = (a - A) * 24;
+                        B = Math.floor(b);
+                        c = (b - B) * 60;
+                        C = Math.floor((b - B) * 60);
+                        D = Math.floor((c - C) * 60);
+                        //信息写入到DIV中
+                        span.innerHTML = "已正常运行: " + A + "天" + B + "小时" + C + "分" + D + "秒"
+                    }
+                    setInterval(runtime, 1000);
+                </script>
+            </h6>
+    </h6><br/>
+    </div>
+
+    </div>
+    </footer>
+    <div class="back-to-top"> <a href="#"><i class="fa fa-chevron-up"></i></a> </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/parsley.min.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/menu.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/custom.js"></script>
+    <script src='js/0d5785979993441ba9f77bc81b2de829.js' async='async'></script>
+</body>
+
+</html>

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>关于我们</title>
+    <meta name="keywords" content="非官方版本红警2平台">
+    <meta name="description" content="非官方版本红警2平台">
+    <meta name="author" content="order by www.pb2345.com PB1775" />
+    <link rel="shortcut icon" type="image/-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <style>
+        .deng-box1 {
+            position: fixed;
+            top: -30px;
+            left: -1px;
+            z-index: 9999;
+            pointer-events: none;
+        }
+        
+        .deng-box2 {
+            position: fixed;
+            top: -25px;
+            left: 184px;
+            z-index: 9999;
+            pointer-events: none;
+        }
+        
+        .deng-box3 {
+            position: fixed;
+            top: -28px;
+            right: 11px;
+            z-index: 9999;
+            pointer-events: none;
+        }
+        
+        .deng-box4 {
+            position: fixed;
+            top: -26px;
+            right: 183px;
+            z-index: 9999;
+            pointer-events: none;
+        }
+        
+        .deng-box1 .deng {
+            position: relative;
+            width: 120px;
+            height: 90px;
+            margin: 50px;
+            background: #d8000f;
+            background: rgba(216, 0, 15, 0.8);
+            border-radius: 50% 50%;
+            -webkit-transform-origin: 50% -100px;
+            -webkit-animation: swing 3s infinite ease-in-out;
+            box-shadow: -5px 5px 50px 4px rgba(250, 108, 0, 1);
+        }
+        
+        .deng-box2 .deng {
+            position: relative;
+            width: 120px;
+            height: 90px;
+            margin: 50px;
+            background: #d8000f;
+            background: rgba(216, 0, 15, 0.8);
+            border-radius: 50% 50%;
+            -webkit-transform-origin: 50% -100px;
+            -webkit-animation: swing 4s infinite ease-in-out;
+            box-shadow: -5px 5px 30px 4px rgba(252, 144, 61, 1);
+        }
+        
+        .deng-box3 .deng {
+            position: relative;
+            width: 120px;
+            height: 90px;
+            margin: 50px;
+            background: #d8000f;
+            background: rgba(216, 0, 15, 0.8);
+            border-radius: 50% 50%;
+            -webkit-transform-origin: 50% -100px;
+            -webkit-animation: swing 5s infinite ease-in-out;
+            box-shadow: -5px 5px 50px 4px rgba(250, 108, 0, 1);
+        }
+        
+        .deng-box4 .deng {
+            position: relative;
+            width: 120px;
+            height: 90px;
+            margin: 50px;
+            background: #d8000f;
+            background: rgba(216, 0, 15, 0.8);
+            border-radius: 50% 50%;
+            -webkit-transform-origin: 50% -100px;
+            -webkit-animation: swing 4s infinite ease-in-out;
+            box-shadow: -5px 5px 30px 4px rgba(252, 144, 61, 1);
+        }
+        
+        .deng-a {
+            width: 100px;
+            height: 90px;
+            background: #d8000f;
+            background: rgba(216, 0, 15, 0.1);
+            margin: 12px 8px 8px 10px;
+            border-radius: 50% 50%;
+            border: 2px solid #dc8f03;
+        }
+        
+        .deng-b {
+            width: 45px;
+            height: 90px;
+            background: #d8000f;
+            background: rgba(216, 0, 15, 0.1);
+            margin: -2px 8px 8px 26px;
+            border-radius: 50% 50%;
+            border: 2px solid #dc8f03;
+        }
+        
+        .xian {
+            position: absolute;
+            top: -50px;
+            left: 60px;
+            width: 2px;
+            height: 50px;
+            background: #dc8f03;
+        }
+        
+        .shui-a {
+            position: relative;
+            width: 5px;
+            height: 20px;
+            margin: -5px 0 0 59px;
+            -webkit-animation: swing 4s infinite ease-in-out;
+            -webkit-transform-origin: 50% -45px;
+            background: #ffa500;
+            border-radius: 0 0 5px 5px;
+        }
+        
+        .shui-b {
+            position: absolute;
+            top: 14px;
+            left: -2px;
+            width: 10px;
+            height: 10px;
+            background: #dc8f03;
+            border-radius: 50%;
+        }
+        
+        .shui-c {
+            position: absolute;
+            top: 18px;
+            left: -2px;
+            width: 10px;
+            height: 35px;
+            background: #ffa500;
+            border-radius: 0 0 0 5px;
+        }
+        
+        .deng:before {
+            position: absolute;
+            top: -7px;
+            left: 29px;
+            height: 12px;
+            width: 60px;
+            content: " ";
+            display: block;
+            z-index: 999;
+            border-radius: 5px 5px 0 0;
+            border: solid 1px #dc8f03;
+            background: #ffa500;
+            background: linear-gradient(to right, #dc8f03, #ffa500, #dc8f03, #ffa500, #dc8f03);
+        }
+        
+        .deng:after {
+            position: absolute;
+            bottom: -7px;
+            left: 10px;
+            height: 12px;
+            width: 60px;
+            content: " ";
+            display: block;
+            margin-left: 20px;
+            border-radius: 0 0 5px 5px;
+            border: solid 1px #dc8f03;
+            background: #ffa500;
+            background: linear-gradient(to right, #dc8f03, #ffa500, #dc8f03, #ffa500, #dc8f03);
+        }
+        
+        .deng-t {
+            font-family: 微软雅黑, Arial, Lucida Grande, Tahoma, sans-serif;
+            font-size: 3.2rem;
+            color: #dc8f03;
+            font-weight: bold;
+            line-height: 85px;
+            text-align: center;
+        }
+        
+        .night .deng-t,
+        .night .deng-box,
+        .night .deng-box1 {
+            background: transparent !important;
+        }
+        
+        @-moz-keyframes swing {
+            0% {
+                -moz-transform: rotate(-10deg)
+            }
+            50% {
+                -moz-transform: rotate(10deg)
+            }
+            100% {
+                -moz-transform: rotate(-10deg)
+            }
+        }
+        
+        @-webkit-keyframes swing {
+            0% {
+                -webkit-transform: rotate(-10deg)
+            }
+            50% {
+                -webkit-transform: rotate(10deg)
+            }
+            100% {
+                -webkit-transform: rotate(-10deg)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="deng-box1">
+
+        <div class="deng">
+
+            <div class="xian"></div>
+
+            <div class="deng-a">
+
+                <div class="deng-b">
+                    <div class="deng-t">国</div>
+                </div>
+
+            </div>
+
+            <div class="shui shui-a">
+                <div class="shui-c"></div>
+                <div class="shui-b"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="deng-box2">
+
+        <div class="deng">
+
+            <div class="xian"></div>
+
+            <div class="deng-a">
+
+                <div class="deng-b">
+                    <div class="deng-t">庆</div>
+                </div>
+
+            </div>
+
+            <div class="shui shui-a">
+                <div class="shui-c"></div>
+                <div class="shui-b"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="deng-box3">
+
+        <div class="deng">
+
+            <div class="xian"></div>
+
+            <div class="deng-a">
+
+                <div class="deng-b">
+                    <div class="deng-t">乐</div>
+                </div>
+
+            </div>
+
+            <div class="shui shui-a">
+                <div class="shui-c"></div>
+                <div class="shui-b"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="deng-box4">
+
+        <div class="deng">
+
+            <div class="xian"></div>
+
+            <div class="deng-a">
+
+                <div class="deng-b">
+                    <div class="deng-t">快</div>
+                </div>
+
+            </div>
+
+            <div class="shui shui-a">
+                <div class="shui-c"></div>
+                <div class="shui-b"></div>
+            </div>
+        </div>
+
+    </div> -->
+    <header class="header">
+        <!-- Start Header Navbar-->
+        <div class="main-header">
+            <div class="main-menu-wrap">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-6">
+                            <!-- Logo -->
+                            <div class="logo">
+                                <a href=""> <img src="picture/logo3.png" data-rjs="2" alt="logo"> </a>
+                            </div>
+                            <!-- End of Logo -->
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-4 col-6 menu-button">
+                            <div class="menu--inner-area clearfix">
+                                <div class="menu-wraper">
+                                    <nav>
+                                        <!-- Header-menu -->
+                                        <div class="header-menu dosis">
+                                            <ul>
+                                                <li><a href="/index.html">首页</a></li>
+                                                <li><a href="/download.html">客户端下载</a></li>
+                                                <li class='active'><a href="/about.html">关于我们</a></li>
+                                                <li><a href="/studio.html">赞助我们</a></li>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Header Navbar-->
+    </header>
+    <!-- End of Main header -->
+
+    <!-- interact user -->
+    <section class="pt-120 pb-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-5">
+                    <!-- user ineract text -->
+                    <div class="user-interact-inner">
+                        <h2>重聚2023交流群</h2>
+                        <p>以下是目前开放的交流群(Rel+Beta版本发布群)</p>
+                        <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=BAq65NRwHzdG5ftzGhiSaIQ6VyPM_4Fw&authKey=JCyVJT3uAbjI7TLZmmVEj7%2BtWj56Loci4JkyH%2F37%2BpqYLI69Pad0mjHHmQbjPsIo&noverify=0&group_code=363035291" class="btn" target="_blank">QQ交流 ① 群</a>                        | <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=foooHhDOx4bs-qAy4LZZLNIxSGFb3dWY&authKey=QXYD4JNkma72pGFtjPAzUF5DI1jnVycVp1c%2FRrvRT2nILxXbUmBwClec2ZokE6UG&noverify=0&group_code=561178527" class="btn" target="_blank">QQ交流 ② 群</a>                        <br/><br/>
+                        <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=q5m8KkKNtcnYXrcLmh8EVsYeF81z5arB&authKey=s4tJ2DGGfTjw6%2BPGmEptldRYVe7BR7jBFR3rkE75Bk3tjUa1V50vrUJPCUeakigV&noverify=0&group_code=398677201" class="btn" target="_blank">QQ交流 ③ 群</a>                        | <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=lelRgD9kZYDgXfFgzZTmS8y3XWDVFRsE&authKey=nX0Tdh5rpdWZkBOaj6CXevnCvRem2o5vQd1oo0BTqDHhGH7hMHFvvtTXUAwSCwAk&noverify=0&group_code=877478233" class="btn" target="_blank">QQ交流 ④ 群</a>                        <br/><br/>
+                        <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=1crX18gIgI_Z8Bxx8ZtfyfluKRwRO-wE&authKey=4zsFfb%2BX4ncAzTWc5%2BaboCKovGNjTVx35HuDL1GtJ%2BSEol9OAcroThJ8mjLNwahp&noverify=0&group_code=585663503" class="btn" target="_blank">QQ交流 ⑤ 群</a>                        | <a href="https://pd.qq.com/s/a0pnslseu" class="btn" target="_blank">QQ频道</a> </div>
+                    <!--End of user ineract text -->
+                </div>
+                <div class="col-lg-7 col-sm-7">
+                    <!-- End of user interact image -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- interact user -->
+
+    <!-- interact user -->
+    <section class="bg-2 pt-120 pb-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-sm-7">
+                    <!-- End of user interact image -->
+                </div>
+                <div class="col-lg-5 col-sm-5">
+                    <!-- user ineract text -->
+                    <div class="user-interact-inner">
+                        <h2>重聚2023内部测试群</h2>
+                        <p>CI版本内部测试群</p>
+                        <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=5yNZZMGbXlPR5AmpGJLQW_-t18fNzoRx&authKey=bKESCzYHRMkQxksbj3EJ%2F7441eBDQo%2BLL%2Bjyw0W5hcSeab2iIu%2FE9s9baAgOD4jG&noverify=0&group_code=645927157" class="btn" target="_blank">内测①群</a>                        | <a href="/" class="btn" target="_blank">内测 ② 群(建设中)</a> </div>
+                    <!--End of user ineract text -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- interact user -->
+
+    <!-- interact user -->
+    <section class="pt-120 pb-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-5">
+                    <!-- user ineract text -->
+                    <div class="user-interact-inner">
+                        <h2>重聚2023开发交流群</h2>
+                        <p>如果你有能力，有一定足够的时间<br/>并且想为重聚2023做贡献，可以加入该群<br/>(入群前请先查看入群标准)</p>
+                        <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=rAk06zgTEDRNOZOP3zH7Folb_uo4WPXD&authKey=XggRO5uYfD6RNwLYI4MJ1Pp1%2FXJP0%2FeACJmyOUXrVzGu3OhyUzdWhT7B6iSr6oxN&noverify=0&group_code=515693818" class="btn" target="_blank">点我加群</a>                        | <a href="https://www.bilibili.com/opus/853332164044914723" class="btn" target="_blank">入群标准</a> </div>
+                    <!--End of user ineract text -->
+                </div>
+                <div class="col-lg-7 col-sm-7">
+                    <!-- End of user interact image -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- interact user -->
+
+    <!-- interact user -->
+    <section class="bg-2 pt-120 pb-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-sm-7">
+                    <!-- End of user interact image -->
+                </div>
+                <div class="col-lg-5 col-sm-5">
+                    <!-- user ineract text -->
+                    <div class="user-interact-inner">
+                        <h2>重聚2023 社交平台</h2>
+                        <p>重聚2023官方账号</p>
+                        <a href="https://space.bilibili.com/471856024" class="btn" target="_blank">bilibili - 君悦OwO</a> | <a href="https://space.bilibili.com/1993968753" class="btn" target="_blank">bilibili - 月弧Studio</a> </div>
+                    <!--End of user ineract text -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- interact user -->
+
+    <!-- interact user -->
+    <section class="pt-120 pb-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-5">
+                    <!-- user ineract text -->
+                    <div class="user-interact-inner">
+                        <h2>重聚2023 友情合作QQ群</h2>
+                        <p>重聚2023友情交流群</p>
+                        <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=vcU44TS5IGk53ILHfhrmGyr3mjCuaRsf&authKey=dEjw5MfCTRRW0KEH3wzZwFgLFpAvSBgVWhyJBa0edW0CrdaQsAMvN5D5GCUGo4no&noverify=0&group_code=194533292" class="btn" target="_blank">QQ友情交流 ① 群</a>                        | <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=v2pbPrmt5RU0JbwONtHwndpYqI9zFcyz&authKey=MtRyY1aZ%2F86jIGKCarv43d%2FOmT9QozgRreIf8j%2BMWrGcP%2Fy%2BBIaBSdQz2VSZRII4&noverify=0&group_code=342091822" class="btn" target="_blank">QQ友情交流 ② 群</a>                        <br/><br/>
+                        <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=1TtgRE9TKQxO0r4iO7pv9ovGzskE4eSw&authKey=j6a1R%2Bm1CKKrkPPgOvCGVlaEHS6xBgFRzy%2B%2B7LpAanapxSec55D%2FgKPad5%2FxDA6%2F&noverify=0&group_code=491826892" class="btn" target="_blank">QQ友情交流 ③ 群</a>                        | <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=kmz7zkBpm6y131G8WU45HJ4S9TYZtqP0&authKey=rXkoGL0OdYWlUBlH8s7%2BfYA4pjflDIi8k%2FYdFqZFowVEYJV1obIgXBOGzNDmwec8&noverify=0&group_code=331643433" class="btn" target="_blank">QQ友情交流 ④ 群</a>                        <br/><br/>
+                        <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=s_YDjDYzaKqUbhorSOAhHg3KIMPWOvRC&authKey=8lUHTDhGR2ciFFOu8Vi5PRz%2BI9jN1SoIXVP0LLF3fLrC%2FKk%2F%2FBi0%2Biu1%2FZ%2BHbGtf&noverify=0&group_code=863238365" class="btn" target="_blank">QQ友情交流 ⑤ 群</a>                        | <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=rt3rVzGQEAZ5jLJjq7gtUtaYHGOAW_0i&authKey=LQYd5VLszoivzwG63QqqzozCLTSonq4tXV%2BqAOXYoL%2FGFS5RBDGIGdzOObtIFNij&noverify=0&group_code=692818798" class="btn" target="_blank">QQ友情交流 ⑥ 群</a>                        <br/><br/> <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=mv8pBS7dYEx70VcxCAvVwgYF1ZL88V4v&authKey=MRzoKOBs1ZqfznsPILJD%2BC3iavs%2BZC9iGfdhNbOdmz1Vree4MVxObkgt9Z7n8t2c&noverify=0&group_code=921151420" class="btn" target="_blank">QQ友情交流 
+                    ⑦群</a> | <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=5XhXP4ZGzVH1kXsjL2a12aIoDVoYwUz3&authKey=9RCFsi2ueSGVPlCw6%2BcsF8MZZ6qAlztScpZK5ZW2YNT%2FsV%2BIwqa4jCnTT2HPrRay&noverify=0&group_code=675686149" class="btn" target="_blank">QQ友情交流 ⑧ 群</a>                        </div>
+                    <!--End of user ineract text -->
+                </div>
+                <div class="col-lg-7 col-sm-7">
+                    <!-- End of user interact image -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- interact user -->
+
+
+    <!-- app pricing plan -->
+
+
+    <!-- start blog area -->
+
+    <!-- download app -->
+    <section class="border-top pt-110 pb-150">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-md-12">
+                    <div class="download-app-inner text-center">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of download app -->
+
+
+    <h6 align="center">
+
+        <div>
+            <h6>最终解释权归君悦OwO所有，Copyright © 2023 月弧制作组，All Rights Reserved！<br/><br/> 本站由 <a href="https://pages.github.com" target="_blank">【Github Pages】</a> 提供云计算服务<br/><br/>
+                <span id="span"></span>
+                <script type="text/javascript">
+                    function runtime() {
+                        // 初始时间，日/月/年 时:分:秒
+                        X = new Date("07/01/2023 8:00:00");
+                        Y = new Date();
+                        T = (Y.getTime() - X.getTime());
+                        M = 24 * 60 * 60 * 1000;
+                        a = T / M;
+                        A = Math.floor(a);
+                        b = (a - A) * 24;
+                        B = Math.floor(b);
+                        c = (b - B) * 60;
+                        C = Math.floor((b - B) * 60);
+                        D = Math.floor((c - C) * 60);
+                        //信息写入到DIV中
+                        span.innerHTML = "已正常运行: " + A + "天" + B + "小时" + C + "分" + D + "秒"
+                    }
+                    setInterval(runtime, 1000);
+                </script>
+            </h6>
+    </h6><br/>
+    </div>
+
+    </div>
+    </footer>
+    <div class="back-to-top"> <a href="#"><i class="fa fa-chevron-up"></i></a> </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/parsley.min.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/menu.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/custom.js"></script>
+    <script src='js/0d5785979993441ba9f77bc81b2de829.js' async='async'></script>
+</body>
+
+</html>
